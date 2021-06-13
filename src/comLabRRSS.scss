@@ -1,0 +1,77 @@
+.componente__prueba{
+  color: red;
+}
+
+.rrssContainer__defaultStyle {
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    .rrssContainer {
+      &__iconOpen {
+        font-size: 1.5rem;
+        i {
+          color: red;
+        }
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      &__iconList {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        pointer-events: none;
+        margin: 0 auto;
+        padding: 0;
+        &__elem {
+          opacity: 0;
+          list-style: none;
+          padding: 0px 7px;
+          &__icon {
+            background: transparent;
+            border: none;
+            font-size: 1rem;
+            outline: none;
+          }
+        }
+      }
+    }
+    &.open {
+      .rrssContainer__iconList {
+        pointer-events: auto;
+        .rrssContainer__iconList__elem {
+          opacity: .5;
+          padding: 20px;
+          border: 1px solid white;
+          margin: .3rem 0;
+          transition: opacity .3s ease;
+          cursor: pointer;
+          &:hover{
+            opacity: 1;
+          }
+          i {
+            color: red;
+          }
+        }
+      }
+    }
+  
+    li:nth-child(1) {
+      transition: opacity 0.3s;
+      transition-delay: 0s;
+    }
+  
+    li:nth-child(2) {
+      transition: opacity 0.3s;
+      transition-delay: 0.1s;
+    }
+  
+    li:nth-child(3) {
+      transition: opacity 0.3s;
+      transition-delay: 0.2s;
+    }
+  }
+  
